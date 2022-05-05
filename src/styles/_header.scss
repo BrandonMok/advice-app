@@ -1,0 +1,20 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $secondary;
+  height: 5em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 4px 2px -2px $tertiary;
+
+  &__intro {
+    font-size: $heading-regular;
+    font-weight: 600;
+    color: $white;
+  }
+}

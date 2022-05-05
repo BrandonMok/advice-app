@@ -1,0 +1,14 @@
+.banner {
+  background-color: $primary;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__intro {
+    color: $white;
+    font-size: $heading-regular;
+    font-weight: 600;
+  }
+}
