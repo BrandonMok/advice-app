@@ -1,6 +1,7 @@
 import './App.scss';
-import Header from './components/header.js';
-import Banner from './components/banner.js';
+import Header from './components/header';
+import Banner from './components/banner';
+import Testimonials from './components/testimonials';
 
 // https://api.adviceslip.com/
 // can give random one
@@ -11,6 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <Banner />
+      <Testimonials />
     </div>
   );
 }

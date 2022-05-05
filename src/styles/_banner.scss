@@ -8,7 +8,15 @@
 
   &__intro {
     color: $white;
-    font-size: $heading-regular;
-    font-weight: 600;
+    text-align: center;
+
+    &__text {
+      font-size: $heading-large;
+      font-weight: 600;
+    }
+
+    &__subtext {
+      font-size: $heading-medium;
+    }
   }
 }
