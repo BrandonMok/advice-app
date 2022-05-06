@@ -1,32 +1,33 @@
 .testimonial {
-    padding: 2rem;
+  padding: 2rem;
 
-    &--order2 {
-        background-color: $primary;
-    }
+  &--order2 {
+    background-color: $primary;
+    color: $white;
+  }
 
-    &__container {
-        text-align: center;
+  &__container {
+    text-align: center;
 
-        &__textContent {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100%;
+    &__textContent {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
 
-            &__name {
-                font-size: $font-large;
-                font-weight: 600;
-            }
+      &__name {
+        font-size: $font-large;
+        font-weight: 600;
+      }
 
-            &__desc {
-                font-style: italic;
+      &__desc {
+        font-style: italic;
 
-                img {
-                    margin: 0 0.5rem;
-                }
-            }
+        img {
+          margin: 0 0.5rem;
         }
+      }
     }
+  }
 }
