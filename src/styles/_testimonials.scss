@@ -1,27 +1,9 @@
-.testimonials {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    padding: 2rem 0;
-
-    &__box1 {
-        grid-area: 2 / 1 / 5 / 3; 
-    }
-
-    &__box2 {
-        grid-area: 3 / 4 / 6 / 6;
-    }
-
-    &__box3 {
-        grid-area: 7 / 2 / 10 / 4;
-    }
-}
-
-
 .testimonial {
     padding: 1rem 2rem;
+
+    // &--order2 {
+    //     background-color: blue;
+    // }
 
     &__container {
         text-align: center;
