@@ -11,12 +11,26 @@
     text-align: center;
 
     &__text {
-      font-size: $heading-large;
+      font-size: $heading-regular;
       font-weight: 600;
     }
 
     &__subtext {
-      font-size: $heading-medium;
+      font-size: $font-large;
+    }
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+  .banner {
+    &__intro {
+      &__text {
+        font-size: $heading-large;
+      }
+      &__subtext {
+        font-size: $heading-medium;
+      }
     }
   }
 }
