@@ -2,6 +2,7 @@ import './App.scss';
 import Header from './components/header';
 import Banner from './components/banner';
 import Testimonials from './components/testimonials';
+import Footer from './components/footer';
 
 // https://api.adviceslip.com/
 // can give random one
@@ -13,6 +14,7 @@ function App() {
       <Header />
       <Banner />
       <Testimonials />
+      <Footer />
     </div>
   );
 }
