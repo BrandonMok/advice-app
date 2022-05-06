@@ -2,13 +2,15 @@
   background-color: $primary;
   height: 100vh;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   &__intro {
     color: $white;
     text-align: center;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__text {
       font-size: $heading-regular;
@@ -17,10 +19,10 @@
 
     &__subtext {
       font-size: $font-large;
+      padding-top: 2rem;
     }
   }
 }
-
 
 @include media-breakpoint-up(md) {
   .banner {
