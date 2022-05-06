@@ -1,16 +1,32 @@
 .testimonial {
-    padding: 1rem 2rem;
+    padding: 2rem;
 
-    // &--order2 {
-    //     background-color: blue;
-    // }
+    &--order2 {
+        background-color: $primary;
+    }
 
     &__container {
         text-align: center;
 
-        &__name {
-            font-size: $font-large;
-            font-weight: 600;
+        &__textContent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+
+            &__name {
+                font-size: $font-large;
+                font-weight: 600;
+            }
+
+            &__desc {
+                font-style: italic;
+
+                img {
+                    margin: 0 0.5rem;
+                }
+            }
         }
     }
 }
