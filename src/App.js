@@ -40,7 +40,7 @@ function App() {
     <div className="App">
       <Header />
       <Banner />
-      <SectionLayout cmp1={<AdviceRandom />}  cmp2='' />
+      <SectionLayout cmp1={<AdviceRandom />}  cmp2={<AdviceRandom />} />
       <Testimonial td={testimonialData[0]} />
       <Testimonial td={testimonialData[1]} />
       <Testimonial td={testimonialData[2]} />

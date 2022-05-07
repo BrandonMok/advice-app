@@ -1,9 +1,9 @@
 .header {
+  background-color: $secondary;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: $secondary;
   height: 5em;
 
   display: flex;
@@ -13,9 +13,9 @@
   box-shadow: 0 4px 2px -2px $secondary;
 
   &__intro {
+    color: $white;
     font-size: $font-large;
     font-weight: 600;
-    color: $white;
   }
 }
 
@@ -55,8 +55,27 @@
   }
 }
 
+.section-layout {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+
+  & > div {
+    flex: 1 1 100%;
+  }
+}
+
+
 @include media-breakpoint-up(md) {
   .header__intro {
     $font-size: $heading-regular;
+  }
+
+  .section-layout {
+    flex-direction: row;
+
+    & > div {
+      margin: 0 2rem;
+    }
   }
 }
