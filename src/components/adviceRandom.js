@@ -24,7 +24,7 @@ export default function AdviceRandom() {
                     <div className='random__title'>Random Advice</div>
                 </div>
                 <div className='row'>
-                    <div className='col-12 mt-4 random__advice-text'>
+                    <div className='random__advice-text'>
                         {advice ? (
                             <>
                             <span>
@@ -40,8 +40,10 @@ export default function AdviceRandom() {
                             <>Click the button to receive advice!</>
                         )}
                     </div>
-                    <div className='col-12 mt-4 random__btn'>
-                        <div className='cbtn cbtn--primary' onClick={getRandomAdvice}>Ask!</div>
+                </div>
+                <div className='row'>
+                    <div className='random__btn-flexbox'>
+                        <div className='cbtn cbtn--primary random__btn' onClick={getRandomAdvice}>Give Me Advice!</div>
                     </div>
                 </div>
             </div>

@@ -28,7 +28,6 @@
 /** custom buttons */
 .cbtn {
   padding: 1rem;
-  font-size: $font-medium;
   font-weight: 600;
   text-decoration: none;
 
@@ -77,5 +76,9 @@
     & > div {
       margin: 0 2rem;
     }
+  }
+
+  .cbtn {
+    font-size: $font-medium;
   }
 }

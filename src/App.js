@@ -5,6 +5,7 @@ import Testimonial from './components/testimonial';
 import Footer from './components/footer';
 import SectionLayout from './components/sectionLayout';
 import AdviceRandom from './components/adviceRandom';
+import AdviceSearch from './components/adviceSearch';
 import Icon1 from './icons/profile1.svg';
 import Icon2 from './icons/profile2.svg';
 import Icon3 from './icons/profile3.svg';
@@ -40,7 +41,7 @@ function App() {
     <div className="App">
       <Header />
       <Banner />
-      <SectionLayout cmp1={<AdviceRandom />}  cmp2={<AdviceRandom />} />
+      <SectionLayout cmp1={<AdviceRandom />}  cmp2={<AdviceSearch />} />
       <Testimonial td={testimonialData[0]} />
       <Testimonial td={testimonialData[1]} />
       <Testimonial td={testimonialData[2]} />
