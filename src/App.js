@@ -5,15 +5,10 @@ import Testimonial from './components/testimonial';
 import Footer from './components/footer';
 import SectionLayout from './components/sectionLayout';
 import AdviceRandom from './components/adviceRandom';
-
 import Icon1 from './icons/profile1.svg';
 import Icon2 from './icons/profile2.svg';
 import Icon3 from './icons/profile3.svg';
 
-
-// https://api.adviceslip.com/
-// can give random one
-// or can use user query for it
 
 function App() {
   const testimonialData = [

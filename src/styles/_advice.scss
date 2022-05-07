@@ -1,13 +1,35 @@
-.adv-random {
-    padding: 4rem 0;
+.random {
+  text-align: center;
+  background-color: $tertiary;
+  padding: 4rem 0;
 
-    &__container {
+  &__title {
+    font-size: $font-large;
+    font-weight: 600;
+  }
+
+  &__advice-text {
+    font-style: italic;
+  }
+
+  &__btn div {
+    display: inline-block;
+  }
+}
+
+
+@include media-breakpoint-up(md) {
+    .random {
         padding: 2rem 0;
-        text-align: center;
+        margin: 2rem 0;
+        border-radius: 4rem;
+    }
+}
 
-        &__title-row {
+@include media-breakpoint-up(lg) {
+    .random {
+        &__title {
             font-size: $heading-regular;
-            font-weight: 600;
         }
     }
 }

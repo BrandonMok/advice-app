@@ -1,21 +1,41 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
+import OpenQuote from "../icons/openQuote.svg";
+import CloseQuote from "../icons/closingQuote.svg";
 
 export default function AdviceRandom() {
+    const [advice, updateAdvice] = useState();
+
+    // https://api.adviceslip.com/
+    const endpoint = 'https://api.adviceslip.com/advice';
+
+
+    function getRandomAdvice() {
+        fetch(endpoint)
+        .then(res => res.json())
+        .then(data => {
+            updateAdvice(data.slip.advice);
+        });
+    }
+
     return (
-        <div className="adv-random" id="adv-random">
-            <div className='adv-random__container container'>
-                <div className='row adv-random__container__title-row'>
-                    <div className='adv-random__container__title-row__title'>
-                        Random Advice
-                    </div>
+        <div className="random container" id="random">
+            <div className='row'>
+                <div className='random__title'>Random Advice</div>
+            </div>
+            <div className='row'>
+                <div className='col-12 mt-4 random__advice-text'>
+                    {advice ? (
+                        <>
+                        <img src={OpenQuote} alt="SVG open quote" />
+                        {advice}
+                        <img src={CloseQuote} alt="SVG close quote" />
+                        </>
+                    ) : ( 
+                        <>Click the button to receive advice!</>
+                    )}
                 </div>
-                <div className='row adv-random__container__content-row'>
-                    <div className='col-12 mt-4'>
-                        <div className='adv-random__container__content-row__advice'>test</div>
-                    </div>
-                    <div className='col-12 mt-4'>
-                        <div className='cbtn cbtn--primary'>Ask!</div>
-                    </div>
+                <div className='col-12 mt-4 random__btn'>
+                    <div className='cbtn cbtn--primary' onClick={getRandomAdvice}>Ask!</div>
                 </div>
             </div>
         </div>

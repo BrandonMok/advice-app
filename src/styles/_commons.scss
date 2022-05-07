@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
 
-  box-shadow: 0 4px 2px -2px $tertiary;
+  box-shadow: 0 4px 2px -2px $secondary;
 
   &__intro {
     font-size: $font-large;
@@ -31,7 +31,6 @@
   font-size: $font-medium;
   font-weight: 600;
   text-decoration: none;
-  transition: transform .2s;
 
   &:hover {
     color: $white;
@@ -55,7 +54,6 @@
     background-color: $gray;
   }
 }
-
 
 @include media-breakpoint-up(md) {
   .header__intro {

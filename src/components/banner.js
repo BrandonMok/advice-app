@@ -55,8 +55,8 @@ export default function Banner() {
                     <div className='col-12'>
                         <div className='banner__intro__subtext'>Ask a way</div>
                         <div className='banner__intro__btn-group'>
-                            <a class="cbtn cbtn--primary" href="#adv-random" role="button">RANDOM</a>
-                            <a class="cbtn cbtn--secondary" href="#adv-search" role="button">SEARCH</a>
+                            <a className="cbtn cbtn--primary" href="#random" role="button">RANDOM</a>
+                            <a className="cbtn cbtn--secondary" href="#adv-search" role="button">SEARCH</a>
                         </div>
                     </div>
                 </div>
