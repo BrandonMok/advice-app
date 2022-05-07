@@ -1,0 +1,13 @@
+.adv-random {
+    padding: 4rem 0;
+
+    &__container {
+        padding: 2rem 0;
+        text-align: center;
+
+        &__title-row {
+            font-size: $heading-regular;
+            font-weight: 600;
+        }
+    }
+}

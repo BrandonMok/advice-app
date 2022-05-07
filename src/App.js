@@ -3,6 +3,8 @@ import Header from './components/header';
 import Banner from './components/banner';
 import Testimonial from './components/testimonial';
 import Footer from './components/footer';
+import SectionLayout from './components/sectionLayout';
+import AdviceRandom from './components/adviceRandom';
 
 import Icon1 from './icons/profile1.svg';
 import Icon2 from './icons/profile2.svg';
@@ -43,6 +45,7 @@ function App() {
     <div className="App">
       <Header />
       <Banner />
+      <SectionLayout cmp1={<AdviceRandom />}  cmp2='' />
       <Testimonial td={testimonialData[0]} />
       <Testimonial td={testimonialData[1]} />
       <Testimonial td={testimonialData[2]} />

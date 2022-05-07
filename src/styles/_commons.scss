@@ -36,6 +36,7 @@
   &:hover {
     color: $white;
     background-color: $selected;
+    cursor: pointer;
   }
 
   &--primary {
