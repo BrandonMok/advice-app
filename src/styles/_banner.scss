@@ -21,6 +21,14 @@
       font-size: $font-large;
       padding-top: 2rem;
     }
+
+    &__btn-group {
+      padding-top: 4rem;
+
+      a {
+        margin: 0 1rem;
+      }
+    }
   }
 }
 

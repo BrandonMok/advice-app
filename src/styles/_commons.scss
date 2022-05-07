@@ -25,6 +25,35 @@
   color: $white;
 }
 
+/** custom buttons */
+.cbtn {
+  padding: 1rem;
+  font-size: $font-medium;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .2s;
+
+  &:hover {
+    color: $white;
+    background-color: $selected;
+  }
+
+  &--primary {
+    background-color: $btn-primary;
+    color: $white;
+    border-radius: 10px;
+  }
+
+  &--secondary {
+    background-color: $btn-secondary;
+    color: $white;
+    border-radius: 10px;
+  }
+
+  &--tertiary {
+    background-color: $gray;
+  }
+}
 
 
 @include media-breakpoint-up(md) {
