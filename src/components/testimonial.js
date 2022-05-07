@@ -42,7 +42,7 @@ export default function Testimonial({ td }) {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-md-6 order-1 order-md-2">
+              <div className="col-12 col-md-6 order-1 order-md-2 testimonial__container__avatar">
                 <img src={td.icon} alt="Avatar" />
               </div>
             </>

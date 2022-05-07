@@ -18,24 +18,31 @@ export default function AdviceRandom() {
     }
 
     return (
-        <div className="random container" id="random">
-            <div className='row'>
-                <div className='random__title'>Random Advice</div>
-            </div>
-            <div className='row'>
-                <div className='col-12 mt-4 random__advice-text'>
-                    {advice ? (
-                        <>
-                        <img src={OpenQuote} alt="SVG open quote" />
-                        {advice}
-                        <img src={CloseQuote} alt="SVG close quote" />
-                        </>
-                    ) : ( 
-                        <>Click the button to receive advice!</>
-                    )}
+        <div className='random' id='random'>
+            <div className="container">
+                <div className='row'>
+                    <div className='random__title'>Random Advice</div>
                 </div>
-                <div className='col-12 mt-4 random__btn'>
-                    <div className='cbtn cbtn--primary' onClick={getRandomAdvice}>Ask!</div>
+                <div className='row'>
+                    <div className='col-12 mt-4 random__advice-text'>
+                        {advice ? (
+                            <>
+                            <span>
+                                <img src={OpenQuote} alt="SVG open quote" />
+                            </span>
+                            {advice}
+                            <span>
+                                <img src={CloseQuote} alt="SVG close quote" />
+                            </span>
+
+                            </>
+                        ) : ( 
+                            <>Click the button to receive advice!</>
+                        )}
+                    </div>
+                    <div className='col-12 mt-4 random__btn'>
+                        <div className='cbtn cbtn--primary' onClick={getRandomAdvice}>Ask!</div>
+                    </div>
                 </div>
             </div>
         </div>
