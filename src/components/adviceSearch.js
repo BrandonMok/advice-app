@@ -5,7 +5,6 @@ import { random } from 'animejs';
 
 
 export default function AdviceSearch() {
-    const [searchTerm, updateSearchTerm] = useState();
     const [error, updateError] = useState();
     const [advice, updateAdvice] = useState();
     const searchInput = useRef();
@@ -70,7 +69,7 @@ export default function AdviceSearch() {
                             </span> 
                             </>
                         ) : (
-                            <>Enter a word that you want advice on</>
+                            <>Enter a serach term that you want advice on</>
                         )}
                     </div>
                 </div>
