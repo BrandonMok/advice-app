@@ -42,9 +42,9 @@ function App() {
       <Header />
       <Banner />
       <SectionLayout cmp1={<AdviceRandom />}  cmp2={<AdviceSearch />} />
-      <Testimonial td={testimonialData[0]} />
+      <Testimonial td={testimonialData[0]} sectionModifier="testimonial--bgPrimary" />
       <Testimonial td={testimonialData[1]} />
-      <Testimonial td={testimonialData[2]} />
+      <Testimonial td={testimonialData[2]} sectionModifier="testimonial--bgPrimary" />
       <Footer />
     </div>
   );

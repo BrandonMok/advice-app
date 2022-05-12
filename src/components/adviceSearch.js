@@ -6,6 +6,7 @@ import { random } from 'animejs';
 
 export default function AdviceSearch() {
     const [searchTerm, updateSearchTerm] = useState();
+    const [error, updateError] = useState();
     const [advice, updateAdvice] = useState();
     const searchInput = useRef();
 
@@ -25,28 +26,27 @@ export default function AdviceSearch() {
             .then(res => res.json())
             .then(data => {
                 if (data.message) {
-                    // error not found
-
+                    // error
+                    updateError(data.message.text);
                 }
                 else {
                     if (data.total_results > 1) {
                         // multiple.. choose random from list given
                         const totalResSize = data.total_results;
-
                         const randomIndex = Math.floor(Math.random() * totalResSize);
-                        // updateAdvice(data.slips[randomIndex]);
+
+                        updateAdvice(data.slips[randomIndex].advice);
                     }
                     else {
                         // only one
+                        updateAdvice(data.slips[0].advice);
                     }
-
                 }
             });
-
-            // .then(data => updateAdvice(data[0].slip.advice));
         }
         else {
             // empty or invalid!
+            updateError('Please enter a valid search term!');
         }
     }
 

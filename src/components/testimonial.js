@@ -3,11 +3,11 @@ import OpenQuote from "../icons/openQuote.svg";
 import CloseQuote from "../icons/closingQuote.svg";
 import PropTypes from "prop-types";
 
-export default function Testimonial({ td }) {
+export default function Testimonial({ td, sectionModifier }) {
   const orderLayoutModifier = td.order ? "" : "testimonial--order2";
 
   return (
-    <div className={`testimonial ${orderLayoutModifier}`}>
+    <div className={`testimonial ${orderLayoutModifier} ${sectionModifier}`}>
       <div className="testimonial__container container">
         <div className="row">
           {td.order ? (
