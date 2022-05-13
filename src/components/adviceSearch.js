@@ -1,8 +1,6 @@
 import React, { useState, useRef } from 'react';
 import OpenQuote from "../icons/openQuote.svg";
 import CloseQuote from "../icons/closingQuote.svg";
-import { random } from 'animejs';
-
 
 export default function AdviceSearch() {
     const [error, updateError] = useState();
