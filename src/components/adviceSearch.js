@@ -8,6 +8,7 @@ export default function AdviceSearch() {
     const [error, updateError] = useState();
     const [advice, updateAdvice] = useState();
     const searchInput = useRef();
+    const defaultText = "Enter a search term that you want advice on.";
 
     const endpoint = 'https://api.adviceslip.com/advice/search/';
 
@@ -69,8 +70,9 @@ export default function AdviceSearch() {
                             </span> 
                             </>
                         ) : (
-                            <>Enter a serach term that you want advice on</>
+                            <>{error ? error : defaultText }</>
                         )}
+
                     </div>
                 </div>
                 <div className='row'>
