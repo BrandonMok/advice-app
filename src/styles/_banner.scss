@@ -1,5 +1,5 @@
 .banner {
-  background-color: $primary;
+  background-image: linear-gradient(to right, $primary , $secondary);
   height: 100vh;
 
   &__intro {

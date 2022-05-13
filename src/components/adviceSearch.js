@@ -68,14 +68,14 @@ export default function AdviceSearch() {
                             </span> 
                             </>
                         ) : (
-                            <>{error ? error : defaultText }</>
+                            <>{ error ? error : defaultText }</>
                         )}
 
                     </div>
                 </div>
                 <div className='row'>
                     <div className='adSearch__btn-flexbox'>
-                        <input ref={searchInput} type='text' name='searchTerm' className='adSearch__btn-flexbox__search' />
+                        <input ref={searchInput} type='text' name='searchTerm' className='form-control adSearch__btn-flexbox__search' placeholder='EX: Spiders...' />
                         <div className='cbtn cbtn--primary adSearch__btn-flexbox__btn' onClick={queryAdvice}>Give Me Advice!</div>
                     </div>
                 </div>
