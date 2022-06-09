@@ -6,41 +6,39 @@ export default function AdviceSearch() {
     const [error, updateError] = useState();
     const [advice, updateAdvice] = useState();
     const searchInput = useRef();
-    const defaultText = "Enter a search term that you want advice on.";
-
+    const defaultText = "Enter a search term for advice.";
     const endpoint = 'https://api.adviceslip.com/advice/search/';
 
-    const inputSanitize = (s) => {
+    function inputSanitize(s) {
         return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 
-    const queryAdvice = () => {
+    async function queryAdvice() {
         const searchTerm = searchInput.current.value;
 
         if (searchTerm) {
             const sanitizedTerm = inputSanitize(searchTerm);
-            
-            fetch(endpoint + sanitizedTerm)
-            .then(res => res.json())
-            .then(data => {
-                if (data.message) {
-                    // error
-                    updateError(data.message.text);
+
+            const response = await fetch(endpoint + sanitizedTerm);
+            const respJSON = await response.json();
+
+            if (respJSON.message) {
+                // error
+                updateError(respJSON.message.text);
+            }
+            else {
+                if (respJSON.total_results > 1) {
+                    // multiple.. choose random from list given
+                    const totalResSize = respJSON.total_results;
+                    const randomIndex = Math.floor(Math.random() * totalResSize);
+
+                    updateAdvice(respJSON.slips[randomIndex].advice);
                 }
                 else {
-                    if (data.total_results > 1) {
-                        // multiple.. choose random from list given
-                        const totalResSize = data.total_results;
-                        const randomIndex = Math.floor(Math.random() * totalResSize);
-
-                        updateAdvice(data.slips[randomIndex].advice);
-                    }
-                    else {
-                        // only one
-                        updateAdvice(data.slips[0].advice);
-                    }
+                    // only one
+                    updateAdvice(respJSON.slips[0].advice);
                 }
-            });
+            }
         }
         else {
             // empty or invalid!

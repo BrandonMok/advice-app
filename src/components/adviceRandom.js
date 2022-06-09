@@ -8,13 +8,10 @@ export default function AdviceRandom() {
     // https://api.adviceslip.com/
     const endpoint = 'https://api.adviceslip.com/advice';
 
-
-    function getRandomAdvice() {
-        fetch(endpoint)
-        .then(res => res.json())
-        .then(data => {
-            updateAdvice(data.slip.advice);
-        });
+    async function getRandomAdvice() {
+        const response = await fetch(endpoint);
+        const respJSON = await response.json();
+        updateAdvice(respJSON.slip.advice);
     }
 
     return (
